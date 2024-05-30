@@ -92,8 +92,9 @@ func checkProgress() {
 		return
 	}
 	book := library[index]
+	pagesRead := book.Pages - book.PagesRead
 	percent := float64(book.PagesRead) / float64(book.Pages) * 100
-	fmt.Printf("You've read %.2f%% of %s\n", percent, book.Title)
+	fmt.Printf("You've read %.2f%% of %s number of pages %d\n", percent, book.Title, pagesRead)
 }
 
 func getInputString() string {
